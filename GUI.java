@@ -55,6 +55,7 @@ public class GUI {
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		log.setEditable(true);
 		
+		//When connect button is pressed
 		connect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//assign port and ip address and check for connection
@@ -71,6 +72,7 @@ public class GUI {
 				ip.setEditable(false);
 				port.setEditable(false);
 				
+				//When Disconnect button is pressed
 				exit.addActionListener(new ActionListener() {
 					
 					public void actionPerformed(ActionEvent arg0) {
@@ -92,6 +94,7 @@ public class GUI {
 			
 		});
 		
+		//When download button is pressed
 		download.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent a) {
