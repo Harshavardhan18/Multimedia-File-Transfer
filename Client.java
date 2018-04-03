@@ -13,6 +13,7 @@ public class Client {
 	protected DataOutputStream os = null;
 	protected String filename;
 	
+	//Constructors
 	public Client() {
 	}
 
@@ -25,7 +26,7 @@ public class Client {
 			e.printStackTrace();
 		}
 	}
-
+        // Checking if socket is connected
 	public String validConnection() {
 		if(!s.isConnected())
 			return "Failed";
@@ -37,7 +38,7 @@ public class Client {
 		}
 		return "Connected";
 	}
-	
+	//Sending file name to server
 	public String sendFilename(String file_name) {
 		String str = null;
 		filename = file_name;
@@ -49,7 +50,7 @@ public class Client {
 		}
 		return str;
 	}
-	
+	//Recieving file contents from server
 	public String recieveFile() {
 		String str;
 		try {
@@ -67,7 +68,7 @@ public class Client {
 		}
 		return "File Downloaded";
 	}
-
+        //Exit the connection
 	public void exitSocket(String exit) {
 		try {
 			os.writeUTF(exit);
